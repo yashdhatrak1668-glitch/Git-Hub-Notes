@@ -11,3 +11,6 @@ git add . = Used to add changes to staging area
 git commit -m = Used to save changes in local repository
 
 git log = Used to display commit history
+
+
+git diff = Used to display file changes

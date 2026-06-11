@@ -10,3 +10,5 @@ git config --global user.name "Your Name" = Used to configure Git username
 
 git config --global user.email "yourmail@gmail.com" = Used to configure Git email
 
+git checkout = Used to switch branch
+
