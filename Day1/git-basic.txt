@@ -1,16 +1,310 @@
+# Day1 - Git Basic Commands
+
+## Git Definition
+
 Git is a distributed version control system used to track changes in files, manage source code, and collaborate with multiple developers.
 
-git init = Used to initialize new Git repository
+Git helps developers:
 
-git clone = Used to download/copy GitHub repository
+* Track file changes
+* Maintain project history
+* Restore previous versions
+* Work in teams without overwriting code
 
-git status = Used to check repository status
+---
 
-git add . = Used to add changes to staging area
+# Git Workflow
 
-git commit -m = Used to save changes in local repository
+Working Directory
+↓
+git add
+↓
+Staging Area
+↓
+git commit
+↓
+Local Repository
+↓
+git push
+↓
+GitHub Repository
 
-git log = Used to display commit history
+---
 
+## git init
 
-git diff = Used to display file changes
+Definition:
+Used to initialize a new Git repository inside a local directory.
+
+Purpose:
+Converts a normal folder into a Git repository by creating a hidden `.git` folder.
+
+Syntax:
+git init
+
+Example:
+git init
+
+Real Use Case:
+Used when starting a completely new local project.
+
+---
+
+## git clone
+
+Definition:
+Used to download/copy an existing GitHub repository to local system.
+
+Syntax:
+git clone <repository-url>
+
+Example:
+git clone https://github.com/user/repo.git
+
+Real Use Case:
+Used when working on existing project repositories.
+
+Important:
+`git clone` automatically initializes Git repository.
+No need to run `git init` again.
+
+---
+
+## git status
+
+Definition:
+Used to check current status of Git repository.
+
+Shows:
+
+* Modified files
+* Staged files
+* Untracked files
+* Current branch
+
+Syntax:
+git status
+
+Example:
+git status
+
+Real Use Case:
+Used before commit to verify repository changes.
+
+---
+
+## git add
+
+Definition:
+Used to move changes from working directory to staging area.
+
+Syntax:
+git add <file-name>
+
+Example:
+git add README.md
+
+Add All Files:
+git add .
+
+Real Use Case:
+Preparing files before commit.
+
+Important:
+Changes are not saved permanently until commit is performed.
+
+---
+
+## git commit -m
+
+Definition:
+Used to save staged changes into local repository with message.
+
+Syntax:
+git commit -m "message"
+
+Example:
+git commit -m "Updated README file"
+
+Real Use Case:
+Used to save project progress and maintain history.
+
+Important:
+Every commit creates unique commit ID.
+
+---
+
+## git push origin main
+
+Definition:
+Used to upload local commits to remote GitHub repository.
+
+Syntax:
+git push origin main
+
+Example:
+git push origin main
+
+Meaning:
+
+* origin = remote repository
+* main = branch name
+
+Real Use Case:
+Uploading latest project changes to GitHub.
+
+---
+
+## git pull origin main
+
+Definition:
+Used to download latest updates from GitHub repository to local system.
+
+Syntax:
+git pull origin main
+
+Example:
+git pull origin main
+
+Real Use Case:
+Used before starting work in team environment.
+
+---
+
+## git branch
+
+Definition:
+Used to display available branches in repository.
+
+Syntax:
+git branch
+
+Example:
+git branch
+
+Real Use Case:
+Checking current working branch.
+
+Example Output:
+
+* main
+
+Important:
+`*` indicates current active branch.
+
+---
+
+## git checkout
+
+Definition:
+Used to switch from one branch to another branch.
+
+Syntax:
+git checkout <branch-name>
+
+Example:
+git checkout main
+
+Real Use Case:
+Used while working on multiple features.
+
+---
+
+## git log
+
+Definition:
+Used to display commit history of repository.
+
+Syntax:
+git log
+
+Example:
+git log
+
+Real Use Case:
+Tracking previous commits and changes.
+
+---
+
+## git restore
+
+Definition:
+Used to discard changes from working directory.
+
+Syntax:
+git restore <file-name>
+
+Example:
+git restore README.md
+
+Real Use Case:
+Used when unwanted changes are made.
+
+---
+
+## git restore --staged
+
+Definition:
+Used to remove file from staging area (unstage).
+
+Syntax:
+git restore --staged <file-name>
+
+Example:
+git restore --staged README.md
+
+Real Use Case:
+Used when wrong file is added accidentally.
+
+---
+
+## git config
+
+Definition:
+Used to configure Git username and email.
+
+Syntax:
+git config --global user.name "Name"
+
+git config --global user.email "[email@gmail.com](mailto:email@gmail.com)"
+
+Example:
+git config --global user.name "Saurabh"
+
+Real Use Case:
+Used for commit author identification.
+
+---
+
+# Important Git Areas
+
+1. Working Directory
+   Area where files are created and modified.
+
+2. Staging Area
+   Temporary area where files are prepared before commit.
+
+3. Local Repository
+   Area where commits are stored locally.
+
+4. Remote Repository
+   GitHub repository stored on internet/cloud.
+
+---
+
+# Common Git Commands Flow
+
+git clone <repo-url>
+
+cd repository-name
+
+git status
+
+vim README.md
+
+git add .
+
+git commit -m "Updated file"
+
+git push origin main
+
